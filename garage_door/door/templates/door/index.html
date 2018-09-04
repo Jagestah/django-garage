@@ -1,0 +1,9 @@
+{% if latest_log_list %}
+    <ul>
+    {% for log in latest_log_list %}
+        <li><a href="/door/">{{ log.log_timestamp }} - Door {{ log.door_log }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No logs are available.</p>
+{% endif %}
